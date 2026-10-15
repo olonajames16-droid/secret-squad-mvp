@@ -95,7 +95,7 @@ export function validateMissionCompletion(
   room: { players?: Array<{ id: string; objective?: string }>; missionState?: Record<string, MissionState> },
   playerId: string,
   missionId: string,
-): boolean {
+) {
   if (!room?.players || !room.missionState || !room.missionState[missionId]) {
     return false;
   }
@@ -143,8 +143,8 @@ export function createEvidence(
   return {
     id,
     type,
-    authenticity,
     holder,
+    authenticity,
     discoveredAt: Date.now(),
   };
 }
